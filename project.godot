@@ -1,0 +1,27 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Dialogue_Viewer"
+config/features=PackedStringArray("4.3", "Forward Plus")
+config/icon="res://icon.svg"
+
+[display]
+
+window/subwindows/embed_subwindows=false
+
+[dotnet]
+
+project/assembly_name="Dialogue_Viewer"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_viewer/plugin.cfg", "res://addons/plugin_refresher/plugin.cfg")
