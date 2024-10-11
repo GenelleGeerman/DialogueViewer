@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6cdn4phhbo4b"]
+
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/d_button.gd" id="1_8ktow"]
+[ext_resource type="Texture2D" uid="uid://sbflvwcsoao0" path="res://addons/dialogue_viewer/delete-icon.png" id="1_y3p74"]
+
+[node name="DialogueButton" type="HBoxContainer"]
+custom_minimum_size = Vector2(64, 32)
+offset_right = 642.0
+offset_bottom = 32.0
+script = ExtResource("1_8ktow")
+
+[node name="ConversationButton" type="Button" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+text_overrun_behavior = 3
+
+[node name="DeleteButton" type="Button" parent="."]
+custom_minimum_size = Vector2(32, 0)
+layout_mode = 2
+size_flags_horizontal = 8
+mouse_filter = 1
+icon = ExtResource("1_y3p74")
+expand_icon = true
+
+[connection signal="pressed" from="ConversationButton" to="." method="_on_conversation_button_pressed"]
+[connection signal="pressed" from="DeleteButton" to="." method="_on_delete_button_pressed"]

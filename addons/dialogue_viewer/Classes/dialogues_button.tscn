@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://b6cdn4phhbo4b"]
-
-[sub_resource type="ButtonGroup" id="ButtonGroup_ol4sn"]
-
-[node name="Button" type="Button"]
-button_group = SubResource("ButtonGroup_ol4sn")
-text = "Conversation 1"
-alignment = 0
-text_overrun_behavior = 3

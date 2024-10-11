@@ -1,9 +1,8 @@
 @tool
 extends EditorPlugin
 
-const MainPanel = preload("res://addons/dialogue_viewer/DialogueDock.tscn")
-var main_panel_instance
-var dialogue : D_Character
+const MainPanel = preload("res://addons/dialogue_viewer/scenes/DialogueDock.tscn")
+var main_panel_instance: DialogueDock
 
 func _enter_tree():
 	main_panel_instance = MainPanel.instantiate()
