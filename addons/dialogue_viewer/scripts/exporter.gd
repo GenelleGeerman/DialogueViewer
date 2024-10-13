@@ -3,11 +3,15 @@ extends Node
 
 class_name Exporter
 
-static func export_yaml(character: D_Dialogue) -> String:
+static func export_yaml(event: D_Dialogue) -> String:
 	var output = ""
-	for d in character.dialogues:
+	for d in event.dialogues:
 		output += traverse_dialogue(d, "", 0)
 	return output
+
+static func export_json(file):
+	printerr("json saving not yet implemented")
+	return "json saving not yet implemented"
 
 static func traverse_dialogue(dialogue: D_Dialogue, output: String, indent_level: int) -> String:
 	var prefix = ""

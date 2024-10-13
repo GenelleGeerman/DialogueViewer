@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cd5plqj6d1rdf"]
 
-[ext_resource type="Script" path="res://addons/dialogue_viewer/dialogue_dock.gd" id="1_64gdc"]
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/dialogue_dock.gd" id="1_dqx4h"]
 
 [node name="Dialogue Viewer" type="MarginContainer"]
 anchors_preset = 15
@@ -14,7 +14,7 @@ theme_override_constants/margin_left = 30
 theme_override_constants/margin_top = 15
 theme_override_constants/margin_right = 30
 theme_override_constants/margin_bottom = 15
-script = ExtResource("1_64gdc")
+script = ExtResource("1_dqx4h")
 
 [node name="Field" type="VBoxContainer" parent="."]
 layout_mode = 2
@@ -71,19 +71,19 @@ layout_mode = 2
 size_flags_vertical = 3
 split_offset = -700
 
-[node name="DialogueContainer" type="ScrollContainer" parent="Field/Body"]
+[node name="DialogueScrollContainer" type="ScrollContainer" parent="Field/Body"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ButtonContainer" type="VBoxContainer" parent="Field/Body/DialogueContainer"]
+[node name="ButtonContainer" type="VBoxContainer" parent="Field/Body/DialogueScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
-[node name="ScrollContainer" type="ScrollContainer" parent="Field/Body"]
+[node name="InputScrollContainer" type="ScrollContainer" parent="Field/Body"]
 layout_mode = 2
 
-[node name="InputContainer" type="VBoxContainer" parent="Field/Body/ScrollContainer"]
+[node name="InputContainer" type="VBoxContainer" parent="Field/Body/InputScrollContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 

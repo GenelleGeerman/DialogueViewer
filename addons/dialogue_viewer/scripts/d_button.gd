@@ -20,5 +20,4 @@ func grab_focus():
 
 func _on_delete_button_pressed() -> void:
 	removed.emit()
-	get_parent().remove_child(self)
 	queue_free()

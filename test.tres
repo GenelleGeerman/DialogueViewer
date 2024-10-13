@@ -1,43 +1,57 @@
-[gd_resource type="Resource" script_class="D_Dialogue" load_steps=9 format=3 uid="uid://chm3lqv4pcfox"]
+[gd_resource type="Resource" script_class="D_Dialogue" load_steps=10 format=3 uid="uid://b1citnlioh74q"]
 
-[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/dialogue.gd" id="1_iglnc"]
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/dialogue.gd" id="1_0ot6e"]
 
-[sub_resource type="Resource" id="Resource_4o8ge"]
-script = ExtResource("1_iglnc")
-text = "sfgsdgergeg"
-children = Array[ExtResource("1_iglnc")]([])
+[sub_resource type="Resource" id="Resource_6pgm6"]
+script = ExtResource("1_0ot6e")
+text = "2"
+children = Array[ExtResource("1_0ot6e")]([])
+is_option = false
 
-[sub_resource type="Resource" id="Resource_ts2ax"]
-script = ExtResource("1_iglnc")
-text = "dasgdfg"
-children = Array[ExtResource("1_iglnc")]([SubResource("Resource_4o8ge")])
+[sub_resource type="Resource" id="Resource_qb2ty"]
+script = ExtResource("1_0ot6e")
+text = "3"
+children = Array[ExtResource("1_0ot6e")]([])
+is_option = false
 
-[sub_resource type="Resource" id="Resource_lmccu"]
-script = ExtResource("1_iglnc")
-text = "rteresgf"
-children = Array[ExtResource("1_iglnc")]([])
+[sub_resource type="Resource" id="Resource_gnw4t"]
+script = ExtResource("1_0ot6e")
+text = "1"
+children = Array[ExtResource("1_0ot6e")]([])
+is_option = true
 
-[sub_resource type="Resource" id="Resource_43dtp"]
-script = ExtResource("1_iglnc")
-text = ""
-children = Array[ExtResource("1_iglnc")]([SubResource("Resource_ts2ax"), SubResource("Resource_lmccu")])
+[sub_resource type="Resource" id="Resource_qjiqb"]
+script = ExtResource("1_0ot6e")
+text = "6"
+children = Array[ExtResource("1_0ot6e")]([])
+is_option = true
 
-[sub_resource type="Resource" id="Resource_eqg64"]
-script = ExtResource("1_iglnc")
-text = "ddadadfgewdfgsdfgsdf"
-children = Array[ExtResource("1_iglnc")]([])
+[sub_resource type="Resource" id="Resource_eywm2"]
+script = ExtResource("1_0ot6e")
+text = "4"
+children = Array[ExtResource("1_0ot6e")]([SubResource("Resource_gnw4t"), SubResource("Resource_qjiqb")])
+is_option = false
 
-[sub_resource type="Resource" id="Resource_dsqtw"]
-script = ExtResource("1_iglnc")
-text = ""
-children = Array[ExtResource("1_iglnc")]([SubResource("Resource_eqg64")])
+[sub_resource type="Resource" id="Resource_r15q0"]
+script = ExtResource("1_0ot6e")
+text = "54"
+children = Array[ExtResource("1_0ot6e")]([])
+is_option = false
 
-[sub_resource type="Resource" id="Resource_to7wj"]
-script = ExtResource("1_iglnc")
-text = "New Conversation"
-children = Array[ExtResource("1_iglnc")]([SubResource("Resource_43dtp"), SubResource("Resource_dsqtw")])
+[sub_resource type="Resource" id="Resource_rugyn"]
+script = ExtResource("1_0ot6e")
+text = "1"
+children = Array[ExtResource("1_0ot6e")]([SubResource("Resource_6pgm6"), SubResource("Resource_qb2ty"), SubResource("Resource_eywm2"), SubResource("Resource_r15q0")])
+is_option = false
+
+[sub_resource type="Resource" id="Resource_eth7h"]
+script = ExtResource("1_0ot6e")
+text = "123"
+children = Array[ExtResource("1_0ot6e")]([SubResource("Resource_rugyn")])
+is_option = false
 
 [resource]
-script = ExtResource("1_iglnc")
+script = ExtResource("1_0ot6e")
 text = "Test"
-children = Array[ExtResource("1_iglnc")]([SubResource("Resource_to7wj")])
+children = Array[ExtResource("1_0ot6e")]([SubResource("Resource_eth7h")])
+is_option = false
