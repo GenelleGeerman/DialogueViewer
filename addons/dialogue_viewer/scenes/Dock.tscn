@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=3 uid="uid://o7aeqfsivlj5"]
+
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/dialogue_graph.gd" id="1_uixsv"]
+
+[node name="Dialogue Viewer" type="GraphEdit"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+grid_pattern = 1
+right_disconnects = true
+connection_lines_curvature = 0.75
+script = ExtResource("1_uixsv")
+
+[node name="PopupMenu" type="PopupMenu" parent="."]
+
+[node name="Container" type="VBoxContainer" parent="."]
+z_index = 2
+layout_mode = 0
+offset_left = 16.0
+offset_top = 64.0
+offset_right = 139.0
+offset_bottom = 235.0
+mouse_filter = 0
+
+[node name="Character Node Button" type="Button" parent="Container"]
+z_index = 2
+layout_mode = 2
+text = "Add Character "
+
+[node name="Text Node Button" type="Button" parent="Container"]
+z_index = 2
+layout_mode = 2
+text = "Add Text
+"
+
+[node name="Option Node Button" type="Button" parent="Container"]
+z_index = 2
+layout_mode = 2
+text = "Add Option
+"
+
+[node name="Start Node Button" type="Button" parent="Container"]
+z_index = 2
+layout_mode = 2
+text = "Add Start
+"
+
+[node name="End Node Button" type="Button" parent="Container"]
+z_index = 2
+layout_mode = 2
+text = "Add End
+"
+
+[connection signal="connection_from_empty" from="." to="." method="_on_connection_from_empty"]
+[connection signal="connection_request" from="." to="." method="_on_connection_request"]
+[connection signal="connection_to_empty" from="." to="." method="_on_connection_to_empty"]
+[connection signal="disconnection_request" from="." to="." method="_on_disconnection_request"]
+[connection signal="popup_request" from="." to="." method="_on_popup_request"]
+[connection signal="popup_hide" from="PopupMenu" to="." method="_on_popup_menu_popup_hide"]
+[connection signal="pressed" from="Container/Character Node Button" to="." method="_on_character_node_button_pressed"]
+[connection signal="pressed" from="Container/Text Node Button" to="." method="_on_text_node_button_pressed"]
+[connection signal="pressed" from="Container/Option Node Button" to="." method="_on_option_node_button_pressed"]
+[connection signal="pressed" from="Container/Start Node Button" to="." method="_on_start_node_button_pressed"]
+[connection signal="pressed" from="Container/End Node Button" to="." method="_on_end_node_button_pressed"]

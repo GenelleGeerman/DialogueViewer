@@ -3,15 +3,18 @@ extends Node
 
 class_name Exporter
 
-static func export_yaml(event: D_Dialogue) -> String:
+static func export_yaml(file, path):
 	var output = ""
-	for d in event.dialogues:
+	for d in file.dialogues:
 		output += traverse_dialogue(d, "", 0)
-	return output
+	var saver = FileAccess.open(path, FileAccess.WRITE)
+	saver.store_line(output)
 
-static func export_json(file):
-	printerr("json saving not yet implemented")
-	return "json saving not yet implemented"
+static func export_json(file, path):
+	var j = JSON.new()
+	var jString = j.stringify(file)
+	var saver = FileAccess.open(path, FileAccess.WRITE)
+	saver.store_line(jString)
 
 static func traverse_dialogue(dialogue: D_Dialogue, output: String, indent_level: int) -> String:
 	var prefix = ""

@@ -34,8 +34,7 @@ func clear_panel():
 	active_dialogue = null
 	conversation_name.text = ""
 	clear_input_container()
-	if dialogues.size() <= 0:
-		add_speaker_button.disabled = true
+	add_speaker_button.disabled = true
 	remove_buttons()
 
 func init_file_dialog():
@@ -62,13 +61,9 @@ func save_file(path: String) -> void:
 		FileType.RESOURCE:
 			ResourceSaver.save(file, path)
 		FileType.YAML:
-			var saver = FileAccess.open(path, FileAccess.WRITE)
-			var exportFile = Exporter.export_yaml(file)
-			saver.store_line(exportFile)
+			Exporter.export_yaml(file, path)
 		FileType.JSON:
-			var saver = FileAccess.open(path, FileAccess.WRITE)
-			var exportFile = Exporter.export_json(file)
-			saver.store_line(exportFile)
+			Exporter.export_json(file, path)
 
 func load_file(path: String) -> void:
 	match get_file_type(path):
@@ -120,61 +115,41 @@ func init_file(path):
 			active_dialogue.text = ""
 
 func box_to_dialogue()-> Array[D_Dialogue]:
-	#var d = D_Dialogue.new()
-	#d.text = "PARENT"
-	#r_btd(input_container, d)
-	#return d.children
-	var output:Array[D_Dialogue] = []
-	var speakerBoxes = input_container.get_children()
-	for speakerBox in speakerBoxes:
-		if speakerBox is not D_Speaker:
-			continue
-		var speakerDialogue = D_Dialogue.new()
-		speakerDialogue.text = speakerBox.get_text()
-		for box in speakerBox.get_children():
-			if box is not D_Line:
-				continue
-			var lineDialogue = D_Dialogue.new()
-			lineDialogue.text = box.get_text()
-			lineDialogue.is_option = box.is_option
-			if box.is_option:
-				speakerDialogue.children[-1].children.append(lineDialogue)
-			else:
-				speakerDialogue.children.append(lineDialogue)
-		output.append(speakerDialogue)
-	return output
+	var d = D_Dialogue.new()
+	d.text = "PARENT"
+	r_btd(input_container, d)
+	return d.children
 
-#func r_btd(parent, parent_dialogue: D_Dialogue = D_Dialogue.new(), grand_parent_dialogue = null ,index = 0) -> void:
-	#var children = parent.get_children()
-	#if children == null || children.size() == 0:
-		#return
-	#if children.size() <= index:
-		#return
-#
-	#var child = children[index]
-	#if child is not D_Speaker and child is not D_Line:
-#
-		#r_btd(parent, parent_dialogue, parent_dialogue, index + 1)
-		#return
-#
-	#var dialogue = D_Dialogue.new()
-	#dialogue.text = child.get_text()
-	#var p = parent_dialogue
-	#if child is D_Line:
-		#dialogue.is_option = child.is_option
-		#if dialogue.is_option:
-			#if parent_dialogue.children.size() == 0:
-				#parent_dialogue.children.append(D_Dialogue.new())
-				#p = grand_parent_dialogue
-#
-	#p.children.append(dialogue)
-	#r_btd(child, dialogue, parent_dialogue)
-	#r_btd(parent, parent_dialogue, parent_dialogue, index + 1)
-	#var t = p.text
-	#for c in p.children:
-		#t+=(" - ")
-		#t+=(c.text)
-	#prints(t)
+func r_btd(parent, parent_dialogue: D_Dialogue = D_Dialogue.new(), grand_parent_dialogue = null ,index = 0) -> void:
+	var children = parent.get_children()
+	if children == null || children.size() == 0:
+		return
+	if children.size() <= index:
+		return
+
+	var child = children[index]
+	if child is not D_Speaker and child is not D_Line:
+
+		r_btd(parent, parent_dialogue, parent_dialogue, index + 1)
+		return
+
+	var dialogue = D_Dialogue.new()
+	dialogue.text = child.get_text()
+	var p = parent_dialogue
+	if child is D_Line:
+		dialogue.is_option = child.is_option
+		if dialogue.is_option:
+			if parent_dialogue.children.size() == 0:
+				parent_dialogue.children.append(D_Dialogue.new())
+				p = grand_parent_dialogue
+
+	p.children.append(dialogue)
+	r_btd(child, dialogue, parent_dialogue)
+	r_btd(parent, parent_dialogue, parent_dialogue, index + 1)
+	var t = p.text
+	for c in p.children:
+		t+=(" - ")
+		t+=(c.text)
 
 func dialogue_to_box(button: D_Dialogue):
 	r_dialogue_to_box(button)
@@ -219,7 +194,11 @@ func remove_buttons():
 func remove_dialogue(dialogue):
 	if active_dialogue == dialogue:
 		clear_input_container()
+		active_button = null
+		conversation_name.text = ""
 	dialogues.erase(dialogue)
+	if dialogues.size() <= 0:
+		add_speaker_button.disabled = true
 
 func get_file_type(path: String):
 	if path.ends_with(".tres"):

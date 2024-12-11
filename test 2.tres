@@ -1,0 +1,39 @@
+[gd_resource type="Resource" script_class="D_Dialogue" load_steps=7 format=3 uid="uid://ckg02wyms7ofu"]
+
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/dialogue.gd" id="1_msa78"]
+
+[sub_resource type="Resource" id="Resource_sgnfw"]
+script = ExtResource("1_msa78")
+text = "how are you doing?"
+children = Array[ExtResource("1_msa78")]([])
+is_option = false
+
+[sub_resource type="Resource" id="Resource_quwn4"]
+script = ExtResource("1_msa78")
+text = "well"
+children = Array[ExtResource("1_msa78")]([])
+is_option = true
+
+[sub_resource type="Resource" id="Resource_eq5sk"]
+script = ExtResource("1_msa78")
+text = "not well"
+children = Array[ExtResource("1_msa78")]([])
+is_option = true
+
+[sub_resource type="Resource" id="Resource_y06a7"]
+script = ExtResource("1_msa78")
+text = "johnie"
+children = Array[ExtResource("1_msa78")]([SubResource("Resource_sgnfw"), SubResource("Resource_quwn4"), SubResource("Resource_eq5sk")])
+is_option = false
+
+[sub_resource type="Resource" id="Resource_7wcrm"]
+script = ExtResource("1_msa78")
+text = "Hello"
+children = Array[ExtResource("1_msa78")]([SubResource("Resource_y06a7")])
+is_option = false
+
+[resource]
+script = ExtResource("1_msa78")
+text = "Test 2"
+children = Array[ExtResource("1_msa78")]([SubResource("Resource_7wcrm")])
+is_option = false

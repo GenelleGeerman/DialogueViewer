@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cteyvjro2y6v5"]
+
+[ext_resource type="Texture2D" uid="uid://dpyg026rdaquh" path="res://icon.svg" id="1_ev7dm"]
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/draggable.gd" id="2_guluy"]
+[ext_resource type="Texture2D" uid="uid://cnluwsoxchgne" path="res://images/pepper_portrait.png" id="3_bpo61"]
+
+[node name="Draggable" type="TextureRect"]
+offset_right = 128.0
+offset_bottom = 128.0
+texture = ExtResource("1_ev7dm")
+script = ExtResource("2_guluy")
+preview_texture = ExtResource("3_bpo61")

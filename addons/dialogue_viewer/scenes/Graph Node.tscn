@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b5rdrwhi011un"]
+
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/node.gd" id="1_echl7"]
+
+[node name="GraphNode" type="GraphNode"]
+offset_right = 192.0
+offset_bottom = 192.0
+resizable = true
+title = "Node"
+script = ExtResource("1_echl7")
+
+[connection signal="node_deselected" from="." to="." method="_on_node_deselected"]
+[connection signal="node_selected" from="." to="." method="_on_node_selected"]

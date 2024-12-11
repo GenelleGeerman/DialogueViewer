@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://drjjsocak4g5h"]
+
+[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/scenes/Graph Node.tscn" id="1_yxru8"]
+
+[node name="Start Node" instance=ExtResource("1_yxru8")]
+offset_bottom = 88.0
+title = "Start"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color(1, 1, 1, 1)
+slot/0/left_icon = null
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color(1, 1, 1, 1)
+slot/0/right_icon = null
+slot/0/draw_stylebox = true
+left_slot_type = 3
+right_slot_type = 3
+
+[node name="LineEdit" type="LineEdit" parent="." index="1"]
+layout_mode = 2
