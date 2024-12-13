@@ -1,12 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbjxki3746gir"]
 
-[ext_resource type="Theme" uid="uid://c5fsssw272w7q" path="res://addons/dialogue_viewer/themes & styles/node.tres" id="1_irvff"]
-[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/text_node.gd" id="1_xkulc"]
+[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/scenes/Graph Node.tscn" id="1_g3li0"]
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/text_node.gd" id="2_ttw0k"]
 
-[node name="Text Node" type="GraphNode"]
-offset_right = 256.0
-offset_bottom = 208.0
-resizable = true
+[node name="Text Node" instance=ExtResource("1_g3li0")]
 title = "Text"
 slot/0/left_enabled = true
 slot/0/left_type = 0
@@ -17,14 +14,9 @@ slot/0/right_type = 0
 slot/0/right_color = Color(1, 1, 1, 1)
 slot/0/right_icon = null
 slot/0/draw_stylebox = true
-script = ExtResource("1_xkulc")
+script = ExtResource("2_ttw0k")
 
-[node name="TextEdit" type="TextEdit" parent="."]
+[node name="TextEdit" type="TextEdit" parent="." index="1"]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("1_irvff")
-placeholder_text = "Enter Dialogue Here"
 wrap_mode = 1
-
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

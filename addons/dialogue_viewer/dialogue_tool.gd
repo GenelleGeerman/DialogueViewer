@@ -6,17 +6,19 @@ var main_panel: Control
 
 func _enter_tree():
 	main_panel = MAIN_PANEL_SCENE.instantiate()
-	add_control_to_dock(EditorPlugin.DOCK_SLOT_RIGHT_UL, main_panel)
+	EditorInterface.get_editor_main_screen().add_child(main_panel)
+#	add_control_to_dock(EditorPlugin.DOCK_SLOT_RIGHT_UL, main_panel)
 	_make_visible(false)
-
 func _exit_tree():
 	if main_panel:
-		remove_control_from_docks(main_panel)
 		main_panel.queue_free()
+
+func _has_main_screen() -> bool:
+	return true
 
 func _make_visible(visible):
 	if main_panel:
-		main_panel.visible = true
+		main_panel.visible = visible
 		main_panel.clear_panel()
 
 func _get_plugin_name():

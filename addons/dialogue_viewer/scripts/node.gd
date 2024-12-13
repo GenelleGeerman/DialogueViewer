@@ -18,11 +18,8 @@ func _ready() -> void:
 	update_slots()
 
 func _on_node_selected() -> void:
-	print("focus")
 	graph.set_current_node(self)
-
 func _on_node_deselected() -> void:
-	print("unfocus")
 	if graph.get_current_node() == self:
 		graph.set_current_node(null)
 
@@ -36,30 +33,34 @@ func on_index_pressed(index):
 		queue_free()
 
 func update_slots():
-	var slots = get_input_port_count()
-	var color
-	for i in slots:
-		match left_slot_type:
-			slot_type.CHARACTER:
-				color = c_color
-			slot_type.TEXT:
-				color = t_color
-			slot_type.OPTION:
-				color = o_color
-			slot_type.END:
-				color = start_end_color
-		set_slot_color_left(i, color)
-		set_slot_type_left(i, left_slot_type)
-	slots = get_output_port_count()
-	for i in slots:
-		match right_slot_type:
-			slot_type.CHARACTER:
-				color = c_color
-			slot_type.TEXT:
-				color = t_color
-			slot_type.OPTION:
-				color = o_color
-			slot_type.START:
-				color = start_end_color
-		set_slot_color_right(i, color)
-		set_slot_type_right(i, right_slot_type)
+	for i in get_child_count():
+		if is_slot_enabled_left(i):
+			set_slot_color_left(i, get_color(left_slot_type))
+			set_slot_type_left(i, left_slot_type)
+		if is_slot_enabled_right(i):
+			set_slot_color_right(i, get_color(right_slot_type))
+			set_slot_type_right(i, right_slot_type)
+
+func get_color(type: slot_type) -> Color:
+	match type:
+		slot_type.CHARACTER:
+			return c_color
+		slot_type.TEXT:
+			return t_color
+		slot_type.OPTION:
+			return o_color
+		slot_type.START:
+			return start_end_color
+
+	return Color.WHITE
+
+func get_node_data() -> Dictionary:
+	var data = {}
+	data["node_name"] = name
+	data["offset"] = position_offset
+	data["scene_path"] = scene_file_path
+	return data
+
+func set_node_data(data):
+	name = data["node_name"]
+	position_offset = data["offset"]

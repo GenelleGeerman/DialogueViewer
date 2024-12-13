@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://cf5avy4rqxqmf"]
+
+[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/option_line.gd" id="1_uw47y"]
+
+[node name="OptionLine" type="HBoxContainer"]
+offset_right = 200.0
+offset_bottom = 31.0
+script = ExtResource("1_uw47y")
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Option Here"
+
+[node name="Delete Button" type="Button" parent="."]
+custom_minimum_size = Vector2(55, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Delete"
+text_overrun_behavior = 3
+autowrap_mode = 2
+
+[connection signal="pressed" from="Delete Button" to="." method="_on_delete_button_pressed"]

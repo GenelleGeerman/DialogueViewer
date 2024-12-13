@@ -42,3 +42,14 @@ func on_file_selected(path):
 func _on_select_button_pressed() -> void:
 	file_dialog.file_mode = EditorFileDialog.FILE_MODE_OPEN_FILE
 	file_dialog.popup_centered()
+
+func get_node_data()-> Dictionary:
+	var data = super.get_node_data()
+	data["character"] = character
+	return data
+
+func set_node_data(data):
+	super.set_node_data(data)
+	character = data["character"]
+	if character:
+		setup_character()
