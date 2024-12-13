@@ -66,6 +66,7 @@ func clear_panel():
 
 func add_valid_connections():
 	add_valid_connection_type(DialogueNode.slot_type.CHARACTER,DialogueNode.slot_type.TEXT)
+	add_valid_connection_type(DialogueNode.slot_type.CHARACTER,DialogueNode.slot_type.OPTION)
 	add_valid_connection_type(DialogueNode.slot_type.TEXT,DialogueNode.slot_type.CHARACTER)
 	add_valid_connection_type(DialogueNode.slot_type.TEXT,DialogueNode.slot_type.OPTION)
 	add_valid_connection_type(DialogueNode.slot_type.OPTION,DialogueNode.slot_type.TEXT)
