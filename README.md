@@ -14,3 +14,6 @@ This project is currently under development.
 * Go to Project > Project Settings > Plugins
 * Enable Dialogue Viewer
 * You should now see a Button next to the Asset Lib button
+
+## Visual
+![Screenshot 2024-12-13 133148](https://github.com/user-attachments/assets/869fc301-f446-4333-9dd7-a70ddb38595d)
