@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://br4jjsa57d2el"]
 
-[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/scenes/Graph Node.tscn" id="1_lotja"]
-[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/character_node.gd" id="2_b5gvf"]
+[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/graph/Graph Node.tscn" id="1_qqtve"]
+[ext_resource type="Script" uid="uid://c2g00ykq3ilrk" path="res://addons/dialogue_viewer/character/character_node.gd" id="2_un8c2"]
 
-[node name="Character Node" instance=ExtResource("1_lotja")]
+[node name="Character Node" instance=ExtResource("1_qqtve")]
 offset_right = 256.0
 offset_bottom = 320.0
 title = "Character"
@@ -34,7 +34,7 @@ slot/2/right_type = 0
 slot/2/right_color = Color(1, 1, 1, 1)
 slot/2/right_icon = null
 slot/2/draw_stylebox = true
-script = ExtResource("2_b5gvf")
+script = ExtResource("2_un8c2")
 left_slot_type = 0
 right_slot_type = 0
 

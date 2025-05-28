@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://buvmg22jvr77"]
 
-[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/option_node.gd" id="1_51hrq"]
-[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/scenes/Graph Node.tscn" id="1_w6a23"]
+[ext_resource type="Script" uid="uid://duifc38j4lrl7" path="res://addons/dialogue_viewer/option/option_node.gd" id="1_51hrq"]
+[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/graph/Graph Node.tscn" id="1_w6a23"]
 
 [node name="Option Node" instance=ExtResource("1_w6a23")]
 title = "Option"

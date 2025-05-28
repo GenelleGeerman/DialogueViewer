@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cm8ndc6bq77gc"]
 
-[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/scenes/Graph Node.tscn" id="1_sfa6j"]
-[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/end_node.gd" id="2_2dj47"]
+[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/graph/Graph Node.tscn" id="1_sfa6j"]
+[ext_resource type="Script" uid="uid://gomq08mleok2" path="res://addons/dialogue_viewer/start end/end_node.gd" id="2_2dj47"]
 
 [node name="End Node" instance=ExtResource("1_sfa6j")]
 offset_right = 64.0

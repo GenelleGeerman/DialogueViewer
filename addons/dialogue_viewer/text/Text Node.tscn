@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbjxki3746gir"]
 
-[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/scenes/Graph Node.tscn" id="1_g3li0"]
-[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/text_node.gd" id="2_ttw0k"]
+[ext_resource type="PackedScene" uid="uid://b5rdrwhi011un" path="res://addons/dialogue_viewer/graph/Graph Node.tscn" id="1_g3li0"]
+[ext_resource type="Script" uid="uid://cvupcxmgpghvc" path="res://addons/dialogue_viewer/text/text_node.gd" id="2_ttw0k"]
 
 [node name="Text Node" instance=ExtResource("1_g3li0")]
 title = "Text"

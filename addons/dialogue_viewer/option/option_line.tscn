@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cf5avy4rqxqmf"]
 
-[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/option_line.gd" id="1_uw47y"]
+[ext_resource type="Script" uid="uid://ck5ytpu4am2g2" path="res://addons/dialogue_viewer/option/option_line.gd" id="1_uw47y"]
 
 [node name="OptionLine" type="HBoxContainer"]
 offset_right = 200.0

@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://o7aeqfsivlj5"]
+[gd_scene load_steps=7 format=3 uid="uid://o7aeqfsivlj5"]
 
-[ext_resource type="Script" path="res://addons/dialogue_viewer/scripts/dialogue_graph.gd" id="1_uixsv"]
+[ext_resource type="Script" uid="uid://1uehm16qfki0" path="res://addons/dialogue_viewer/graph/dialogue_graph.gd" id="1_uixsv"]
+[ext_resource type="PackedScene" uid="uid://br4jjsa57d2el" path="res://addons/dialogue_viewer/character/Character Node.tscn" id="2_oywxc"]
+[ext_resource type="PackedScene" uid="uid://cbjxki3746gir" path="res://addons/dialogue_viewer/text/Text Node.tscn" id="3_wjaqu"]
+[ext_resource type="PackedScene" uid="uid://buvmg22jvr77" path="res://addons/dialogue_viewer/option/Option Node.tscn" id="4_dmgoi"]
+[ext_resource type="PackedScene" uid="uid://drjjsocak4g5h" path="res://addons/dialogue_viewer/start end/Start Node.tscn" id="5_lfq25"]
+[ext_resource type="PackedScene" uid="uid://cm8ndc6bq77gc" path="res://addons/dialogue_viewer/start end/End Node.tscn" id="6_ceafq"]
 
 [node name="Dialogue Viewer" type="GraphEdit"]
 anchors_preset = 15
@@ -14,6 +19,11 @@ grid_pattern = 1
 right_disconnects = true
 connection_lines_curvature = 0.75
 script = ExtResource("1_uixsv")
+character_node_scene = ExtResource("2_oywxc")
+text_node_scene = ExtResource("3_wjaqu")
+option_node_scene = ExtResource("4_dmgoi")
+start_node_scene = ExtResource("5_lfq25")
+end_node_scene = ExtResource("6_ceafq")
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
 
