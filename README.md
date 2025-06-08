@@ -28,7 +28,9 @@ _Note: This project is currently under development._
 ### Dialogue Viewer
 
 - After enabling the plugin, use the menu interface to create and visualize dialogues for your project.
-- No programming is required—simply use the DialogueViewer panel to manage your dialogue structure.
+- No programming is required for this part
+- Simply use the DialogueViewer panel to manage your dialogue structure.
+- The only requirement is that each Dialogue MUST have a Start Node and an End Node.
 - For a visual reference, here’s a screenshot of the plugin in action:  
   ![Screenshot](https://github.com/user-attachments/assets/869fc301-f446-4333-9dd7-a70ddb38595d)
 
