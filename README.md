@@ -42,7 +42,7 @@ _Note: This project is currently under development._
 - To start reading, call the get_next_line() function from the dialogue_reader. This returns a Dialogue Object
   Check below for an example
   
-![demo](https://github.com/user-attachments/assets/55786ee2-f712-4451-ac82-f403e6d1e0ac)
+![Demo](https://github.com/user-attachments/assets/44da79c8-f897-4c7e-bc3d-5dc26b61f632)
   
 ![image](https://github.com/user-attachments/assets/4e6023b0-c66b-41da-a75f-ee8e96f1e852)
 
