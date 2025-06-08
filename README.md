@@ -39,4 +39,5 @@ _Note: This project is currently under development._
 - The dialogue_reader has a signal you can listen to called end_reached. This will get called when you have reached the end of the dialogue
 - To start reading, call the get_next_line() function from the dialogue_reader. This returns a Dialogue Object
   Check below for an example
-  ![Screenshot](https://github.com/user-attachments/assets/869fc301-f446-4333-9dd7-a70ddb38595d)
+  ![dialogue_reader_example](https://github.com/user-attachments/assets/abf318d3-52ce-4fad-951c-84dd04543892)
+
