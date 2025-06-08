@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://bxmf4b6hx1u3e"]
-
-[ext_resource type="Texture2D" uid="uid://cnluwsoxchgne" path="res://images/pepper_portrait.png" id="1_bi0px"]
-[ext_resource type="Script" uid="uid://bsniowx8gj1k8" path="res://addons/dialogue_viewer/character/character_data.gd" id="2_owvrt"]
-
-[resource]
-script = ExtResource("2_owvrt")
-character_name = "Pepper"
-portrait = ExtResource("1_bi0px")

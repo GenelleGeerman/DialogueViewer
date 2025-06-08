@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="GraphData" load_steps=3 format=3 uid="uid://bttru4fsuuhib"]
 
-[ext_resource type="Resource" uid="uid://d257y24dor0m5" path="res://character.tres" id="1_hr0ed"]
+[ext_resource type="Resource" uid="uid://d257y24dor0m5" path="res://example/character.tres" id="1_hr0ed"]
 [ext_resource type="Script" uid="uid://wvsh7vndbr7" path="res://addons/dialogue_viewer/graph/graph_data.gd" id="1_umafu"]
 
 [resource]

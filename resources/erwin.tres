@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://btn0v3510jbsr"]
-
-[ext_resource type="Script" uid="uid://bsniowx8gj1k8" path="res://addons/dialogue_viewer/character/character_data.gd" id="1_d3vjk"]
-[ext_resource type="Texture2D" uid="uid://dpyg026rdaquh" path="res://icon.svg" id="1_ve72v"]
-
-[resource]
-script = ExtResource("1_d3vjk")
-character_name = "Erwin"
-portrait = ExtResource("1_ve72v")

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="CharacterData" load_steps=3 format=3 uid="uid://d257y24dor0m5"]
 
-[ext_resource type="Texture2D" uid="uid://cnluwsoxchgne" path="res://images/pepper_portrait.png" id="1_73rnh"]
+[ext_resource type="Texture2D" uid="uid://cnluwsoxchgne" path="res://example/images/pepper_portrait.png" id="1_73rnh"]
 [ext_resource type="Script" uid="uid://bsniowx8gj1k8" path="res://addons/dialogue_viewer/character/character_data.gd" id="1_kfex2"]
 
 [resource]

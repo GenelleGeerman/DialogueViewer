@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dpyg026rdaquh" path="res://icon.svg" id="1_ev7dm"]
 [ext_resource type="Script" uid="uid://dyewjcn41c8wu" path="res://addons/dialogue_viewer/graph/draggable.gd" id="2_guluy"]
-[ext_resource type="Texture2D" uid="uid://cnluwsoxchgne" path="res://images/pepper_portrait.png" id="3_bpo61"]
+[ext_resource type="Texture2D" uid="uid://cnluwsoxchgne" path="res://example/images/pepper_portrait.png" id="3_bpo61"]
 
 [node name="Draggable" type="TextureRect"]
 offset_right = 128.0
