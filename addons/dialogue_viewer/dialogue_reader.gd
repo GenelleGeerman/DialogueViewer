@@ -17,7 +17,7 @@ func _ready() -> void:
 	var startNode = readable["startNodeName"]
 	next_node_name = readable[startNode]["to_node"][0] #readable[start node name]["to_node"][from_port] = node_name
 
-func get_next_line(selected_option = ""):
+func get_next_line(selected_option = "") -> Dialogue:
 	if is_at_end: return null
 	var output = Dialogue.new()
 	var node = readable[next_node_name]

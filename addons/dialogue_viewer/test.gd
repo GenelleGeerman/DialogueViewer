@@ -1,12 +1,13 @@
 extends Node2D
 
 @onready var label:Label = $Label
-@onready var end:Label = $End
+@onready var end:Label = $EndText
 @onready var dialogue_reader:DialogueReader = $DialogueReader
 var selected_option = ""
 
 func _ready() -> void:
 	dialogue_reader.end_reached.connect(on_end_reached)
+	
 func _on_button_pressed() -> void:
 	var dialogue = dialogue_reader.get_next_line(selected_option) as Dialogue
 	selected_option = ""
