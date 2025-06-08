@@ -31,7 +31,6 @@ func get_readable(graphData: GraphData):
 		readable[fromNode["node_name"]] = node
 		if fromNode.has("character"):
 			node["character"] = fromNode["character"]
-	print(readable)
 	return readable
 
 func find_edge(edge, nodeName):

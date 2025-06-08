@@ -14,7 +14,7 @@ nodes = [{
 "node_name": &"Text Node",
 "offset": Vector2(463, 202),
 "scene_path": "res://addons/dialogue_viewer/text/Text Node.tscn",
-"text": "123"
+"text": "Would you like to start a game?"
 }, {
 "node": "start",
 "node_name": &"Start Node",
@@ -25,22 +25,46 @@ nodes = [{
 "node_name": &"Option Node",
 "offset": Vector2(694, 344),
 "options": {
-"12": 1,
-"23": 2
+"No": 1,
+"Yes": 2
 },
 "scene_path": "res://addons/dialogue_viewer/option/Option Node.tscn"
 }, {
-"node_name": &"Text Node2",
-"offset": Vector2(929, 452),
+"node": "end",
+"node_name": &"End Node",
+"offset": Vector2(1260, 360),
+"scene_path": "res://addons/dialogue_viewer/start end/End Node.tscn"
+}, {
+"character": ExtResource("1_hr0ed"),
+"node_name": &"Character Node",
+"offset": Vector2(100, 100),
+"scene_path": "res://addons/dialogue_viewer/character/Character Node.tscn"
+}, {
+"node_name": &"Text Node",
+"offset": Vector2(463, 202),
 "scene_path": "res://addons/dialogue_viewer/text/Text Node.tscn",
-"text": "pokemon!"
+"text": "Would you like to start a game?"
+}, {
+"node": "start",
+"node_name": &"Start Node",
+"offset": Vector2(-273, 114),
+"scene_path": "res://addons/dialogue_viewer/start end/Start Node.tscn",
+"text": "dghj"
+}, {
+"node_name": &"Option Node",
+"offset": Vector2(694, 344),
+"options": {
+"No": 2,
+"Yes": 1
+},
+"scene_path": "res://addons/dialogue_viewer/option/Option Node.tscn"
 }, {
 "node": "end",
 "node_name": &"End Node",
 "offset": Vector2(1260, 360),
 "scene_path": "res://addons/dialogue_viewer/start end/End Node.tscn"
 }]
-edges = [{
+edges = Array[Dictionary]([{
 "from_node": &"Character Node",
 "from_port": 0,
 "keep_alive": false,
@@ -60,23 +84,17 @@ edges = [{
 "to_port": 0
 }, {
 "from_node": &"Option Node",
-"from_port": 1,
+"from_port": 0,
 "keep_alive": false,
-"to_node": &"Text Node2",
+"to_node": &"End Node",
 "to_port": 0
 }, {
 "from_node": &"Option Node",
-"from_port": 0,
+"from_port": 1,
 "keep_alive": false,
-"to_node": &"End Node",
+"to_node": &"Text Node",
 "to_port": 0
-}, {
-"from_node": &"Text Node2",
-"from_port": 0,
-"keep_alive": false,
-"to_node": &"End Node",
-"to_port": 0
-}]
+}])
 readable = {
 &"Character Node": {
 "character": ExtResource("1_hr0ed"),
@@ -86,12 +104,12 @@ readable = {
 },
 &"Option Node": {
 "options": {
-"12": 1,
-"23": 2
+"No": 0,
+"Yes": 1
 },
 "to_node": {
 0: &"End Node",
-1: &"Text Node2"
+1: &"Text Node"
 }
 },
 &"Start Node": {
@@ -104,18 +122,10 @@ readable = {
 },
 &"Text Node": {
 "text": {
-0: "123"
+0: "Would you like to start a game?"
 },
 "to_node": {
 0: &"Option Node"
-}
-},
-&"Text Node2": {
-"text": {
-0: "pokemon!"
-},
-"to_node": {
-0: &"End Node"
 }
 },
 "endNodeName": &"End Node",

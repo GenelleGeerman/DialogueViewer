@@ -63,7 +63,10 @@ func save_as():
 	file_dialog.popup_centered()
 
 func save_file(path: String) -> void:
-	graph = GraphData.new()
+	graph 
+	if !FileAccess.file_exists(path):
+		graph = GraphData.new()
+	else: graph = ResourceLoader.load(path)
 	for node in get_children():
 		if node is DialogueNode:
 			graph.nodes.append(node.get_node_data())

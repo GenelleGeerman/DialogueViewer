@@ -5,6 +5,6 @@
 
 [resource]
 script = ExtResource("1_kfex2")
-character_name = "K"
+character_name = "Pepper"
 portrait = ExtResource("1_73rnh")
 metadata/_custom_type_script = "uid://bsniowx8gj1k8"
