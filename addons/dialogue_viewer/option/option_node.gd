@@ -2,7 +2,7 @@
 extends DialogueNode
 
 class_name OptionNode
-var option_line_scene = preload("res://addons/dialogue_viewer/option/option_line.tscn")
+var option_line_scene = preload("./option_line.tscn")
 var options = {}
 
 func get_node_data()-> Dictionary:
