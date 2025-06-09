@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://ccddjavcj08u0"]
 
-[ext_resource type="Script" uid="uid://d27qes6xdklhu" path="res://example/test.gd" id="1_8x41f"]
+[ext_resource type="Script" uid="uid://d27qes6xdklhu" path="res://addons/example/test.gd" id="1_8x41f"]
 [ext_resource type="Script" uid="uid://c4e6qxe3kxm2" path="res://addons/dialogue_viewer/dialogue_reader.gd" id="2_lhc6v"]
-[ext_resource type="Resource" uid="uid://bttru4fsuuhib" path="res://example/test.tres" id="3_kw1fx"]
-[ext_resource type="Texture2D" uid="uid://cnluwsoxchgne" path="res://example/images/pepper_portrait.png" id="4_0d30h"]
+[ext_resource type="Resource" uid="uid://bttru4fsuuhib" path="res://addons/example/test.tres" id="3_kw1fx"]
+[ext_resource type="Texture2D" uid="uid://cnluwsoxchgne" path="res://addons/example/images/pepper_portrait.png" id="4_0d30h"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_8x41f")

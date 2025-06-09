@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cnluwsoxchgne"
-path="res://.godot/imported/pepper_portrait.png-5d8eb6ed859e10c1da5fec352af4a01f.ctex"
+path="res://.godot/imported/pepper_portrait.png-736a06c5e5250b648e8371d9f4d638c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://example/images/pepper_portrait.png"
-dest_files=["res://.godot/imported/pepper_portrait.png-5d8eb6ed859e10c1da5fec352af4a01f.ctex"]
+source_file="res://addons/example/images/pepper_portrait.png"
+dest_files=["res://.godot/imported/pepper_portrait.png-736a06c5e5250b648e8371d9f4d638c2.ctex"]
 
 [params]
 
