@@ -24,6 +24,11 @@ func get_next_line(selected_option = "") -> Dialogue:
 		end_reached.emit()
 		is_at_end = true
 		return null
+	if !readable.has(next_node_name):
+		push_error("Dialogue "+dialogue.resource_name+ " has incomplete connections")
+		end_reached.emit()
+		is_at_end = true
+		return null
 	var node = readable[next_node_name]
 	if next_node_name == end_node_name:
 		end_reached.emit()

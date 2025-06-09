@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://wvsh7vndbr7" path="res://addons/dialogue_viewer/graph/graph_data.gd" id="1_umafu"]
 
 [resource]
+resource_name = "test"
 script = ExtResource("1_umafu")
 nodes = [{
 "character": ExtResource("1_hr0ed"),
@@ -61,6 +62,64 @@ nodes = [{
 }, {
 "node": "end",
 "node_name": &"End Node",
+"offset": Vector2(1260, 360),
+"scene_path": "res://addons/dialogue_viewer/start end/End Node.tscn"
+}, {
+"character": ExtResource("1_hr0ed"),
+"node_name": &"Character Node",
+"offset": Vector2(100, 100),
+"scene_path": "res://addons/dialogue_viewer/character/Character Node.tscn"
+}, {
+"node_name": &"Text Node",
+"offset": Vector2(463, 202),
+"scene_path": "res://addons/dialogue_viewer/text/Text Node.tscn",
+"text": "Would you like to start a game?"
+}, {
+"node": "start",
+"node_name": &"Start Node",
+"offset": Vector2(-273, 114),
+"scene_path": "res://addons/dialogue_viewer/start end/Start Node.tscn",
+"text": "dghj"
+}, {
+"node_name": &"Option Node",
+"offset": Vector2(694, 344),
+"options": {
+"No": 1,
+"Yes": 2
+},
+"scene_path": "res://addons/dialogue_viewer/option/Option Node.tscn"
+}, {
+"node": "end",
+"node_name": &"End Node",
+"offset": Vector2(1260, 360),
+"scene_path": "res://addons/dialogue_viewer/start end/End Node.tscn"
+}, {
+"character": ExtResource("1_hr0ed"),
+"node_name": &"Character Node2",
+"offset": Vector2(100, 100),
+"scene_path": "res://addons/dialogue_viewer/character/Character Node.tscn"
+}, {
+"node_name": &"Text Node2",
+"offset": Vector2(463, 202),
+"scene_path": "res://addons/dialogue_viewer/text/Text Node.tscn",
+"text": "Would you like to start a game?"
+}, {
+"node": "start",
+"node_name": &"Start Node2",
+"offset": Vector2(-273, 114),
+"scene_path": "res://addons/dialogue_viewer/start end/Start Node.tscn",
+"text": "Test"
+}, {
+"node_name": &"Option Node2",
+"offset": Vector2(694, 344),
+"options": {
+"No": 2,
+"Yes": 1
+},
+"scene_path": "res://addons/dialogue_viewer/option/Option Node.tscn"
+}, {
+"node": "end",
+"node_name": &"End Node2",
 "offset": Vector2(1260, 360),
 "scene_path": "res://addons/dialogue_viewer/start end/End Node.tscn"
 }]

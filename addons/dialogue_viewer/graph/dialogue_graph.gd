@@ -63,7 +63,6 @@ func save_as():
 	file_dialog.popup_centered()
 
 func save_file(path: String) -> void:
-	graph 
 	if !FileAccess.file_exists(path):
 		graph = GraphData.new()
 	else: graph = ResourceLoader.load(path)
@@ -72,6 +71,7 @@ func save_file(path: String) -> void:
 			graph.nodes.append(node.get_node_data())
 	graph.edges = get_connection_list()
 	graph.readable = encoder.get_readable(graph)
+	graph.resource_name = path.split("/")[-1].trim_suffix(".tres")
 	ResourceSaver.save(graph, path)
 
 func load_file(path: String) -> void:
