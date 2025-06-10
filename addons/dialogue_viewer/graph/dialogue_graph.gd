@@ -66,6 +66,8 @@ func save_file(path: String) -> void:
 	if !FileAccess.file_exists(path):
 		graph = GraphData.new()
 	else: graph = ResourceLoader.load(path)
+	graph.nodes.clear()
+	graph.edges.clear()
 	for node in get_children():
 		if node is DialogueNode:
 			graph.nodes.append(node.get_node_data())
@@ -82,6 +84,7 @@ func load_file(path: String) -> void:
 		var scene_path = node["scene_path"]
 		var n_instance = load(scene_path).instantiate() as DialogueNode
 		add_child(n_instance, true)
+		move_child(n_instance, -1)
 		n_instance.owner = self
 		n_instance.set_node_data(node)
 	for edge in graph.edges:
@@ -116,6 +119,7 @@ func create_node(index, port = -1, position = Vector2.ZERO):
 		position = initial_position + (node_index * Vector2(20,20))+ scroll_offset
 		node_index = (node_index+1) % 10
 	add_child(node, true)
+	move_child(node, 1)
 	node.position_offset = position
 	return node
 

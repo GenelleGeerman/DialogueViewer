@@ -2,7 +2,7 @@
 extends GraphNode
 class_name DialogueNode
 
-var graph: GraphEdit
+var graph: DialogueGraph
 
 @export var left_slot_type :slot_type = slot_type.TEXT
 @export var right_slot_type :slot_type = slot_type.TEXT
