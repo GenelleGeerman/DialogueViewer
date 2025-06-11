@@ -49,5 +49,3 @@ _Note: This project is currently under development._
 ![image](https://github.com/user-attachments/assets/05026fbb-b5ea-4310-b972-ffdd0589a733)
 
 ![image](https://github.com/user-attachments/assets/4430fb8e-2be0-4c46-b817-cb726cd39dd6)
-
-
