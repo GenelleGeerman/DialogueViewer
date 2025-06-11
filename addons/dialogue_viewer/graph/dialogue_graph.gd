@@ -111,6 +111,7 @@ func create_node(index, port = -1, position = Vector2.ZERO):
 			node = text_node_scene.instantiate()
 		DialogueNode.slot_type.OPTION:
 			node = option_node_scene.instantiate()
+			node.option_removed.connect(remove_connection_line)
 		DialogueNode.slot_type.START:
 			node = start_node_scene.instantiate()
 		DialogueNode.slot_type.END:
@@ -197,6 +198,7 @@ func _on_connection_request(from_node: StringName, from_port: int, to_node: Stri
 
 func remove_connection_line(nodeName: StringName, port):
 	var list = get_connection_list()
+	print(list)
 	for conn in list:
 		if conn["from_node"] == nodeName and conn["from_port"] == port:
 			disconnect_node(nodeName, conn["from_port"], conn["to_node"], conn["to_port"])

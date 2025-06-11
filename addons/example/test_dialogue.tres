@@ -23,20 +23,20 @@ nodes = [{
 "offset": Vector2(160, -80),
 "scene_path": "res://addons/dialogue_viewer/character/Character Node.tscn"
 }, {
+"node_name": &"Text Node",
+"offset": Vector2(660, 40),
+"scene_path": "res://addons/dialogue_viewer/text/Text Node.tscn",
+"text": "Do you want to test the new dialogue system?"
+}, {
 "node_name": &"Option Node",
-"offset": Vector2(960, 100),
+"offset": Vector2(980, 120),
 "options": {
 "No": 2,
 "Yes": 1
 },
 "scene_path": "res://addons/dialogue_viewer/option/Option Node.tscn"
-}, {
-"node_name": &"Text Node",
-"offset": Vector2(660, 40),
-"scene_path": "res://addons/dialogue_viewer/text/Text Node.tscn",
-"text": "Do you want to test the new dialogue system?"
 }]
-edges = Array[Dictionary]([{
+edges = [{
 "from_node": &"Text Node",
 "from_port": 0,
 "keep_alive": false,
@@ -66,7 +66,7 @@ edges = Array[Dictionary]([{
 "keep_alive": false,
 "to_node": &"Text Node",
 "to_port": 0
-}])
+}]
 readable = {
 &"Character Node": {
 "character": ExtResource("1_hr0ed"),
@@ -77,9 +77,9 @@ readable = {
 &"End Node": "end",
 &"Option Node": {
 "options": [{
-"Yes": 0
-}, {
 "No": 1
+}, {
+"Yes": 0
 }],
 "to_node": {
 0: &"End Node",

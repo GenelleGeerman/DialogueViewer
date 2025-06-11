@@ -46,12 +46,14 @@ func try_add_text(node: Dictionary, from_node: Dictionary, edge: Dictionary) -> 
 		node["text"][edge["from_port"]] = from_node["text"]
 
 func try_add_options(node: Dictionary, from_node: Dictionary) -> void:
-	if from_node.has("options"):
-		var ops = []
-		for option in from_node["options"]:
-			ops.append({option: int(from_node["options"][option]) - 1})  # Adjust for port offset
-		node.set("options", ops)
-		print(node)
+	if !from_node.has("options"): return
+	var ops = []
+	for option in from_node["options"]:
+		ops.append({option: int(from_node["options"][option]) - 1})  # Adjust for port offset
+	ops.sort_custom(func(a,b): a.values()[0] < b.values()[0])
+	print(ops)
+	node.set("options", ops)
+	
 func try_add_character(node: Dictionary, from_node: Dictionary) -> void:
 	if from_node.has("character"):
 		node["character"] = from_node["character"]
