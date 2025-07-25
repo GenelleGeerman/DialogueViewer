@@ -11,14 +11,14 @@ func _ready() -> void:
 	dialogue_reader.end_reached.connect(on_end_reached)
 	option_btn_ctnr.hide()
 	end.hide()
-	
+
 func _on_button_pressed() -> void:
 	var dialogue = dialogue_reader.get_next_line(selected_option) as Dialogue
 	selected_option = ""
 	if dialogue == null: return
-	label.text = (dialogue.speaker as CharacterData).character_name + ": \n" 
+	label.text = (dialogue.speaker as CharacterData).character_name + ": \n"
 	if dialogue.isOption:
-		
+
 		handle_options(dialogue.options)
 	else:
 		label.text += dialogue.text
@@ -39,7 +39,7 @@ func option_pressed(option):
 	for btn in option_btn_ctnr.get_children():
 		btn.queue_free()
 	_on_button_pressed()
-	
+
 func on_end_reached():
 	next_dialogue_btn.hide()
 	end.show()

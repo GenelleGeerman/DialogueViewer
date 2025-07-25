@@ -12,7 +12,7 @@ var character_color: Color = Color(0.346, 0.832, 0.842)
 var text_color: Color = Color(0.77, 0.277, 0.277)
 var option_color: Color = Color(0.515, 0.77, 0.277)
 var start_end_color: Color = Color(0.8, 0.884, 0.981)
-var id 
+var id
 
 func _ready() -> void:
 	graph = get_parent()
@@ -73,4 +73,3 @@ func _on_gui_input(event: InputEvent) -> void:
 		if event.keycode == KEY_DELETE or event.keycode == KEY_BACKSPACE:
 			_on_node_deselected()
 			queue_free()
-			

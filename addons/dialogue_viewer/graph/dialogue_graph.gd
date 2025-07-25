@@ -4,10 +4,10 @@ extends GraphEdit
 class_name DialogueGraph
 @onready var popup_menu = $PopupMenu
 @export var character_node_scene : PackedScene
-@export var text_node_scene : PackedScene 
-@export var option_node_scene: PackedScene  
+@export var text_node_scene : PackedScene
+@export var option_node_scene: PackedScene
 @export var start_node_scene : PackedScene
-@export var end_node_scene: PackedScene 
+@export var end_node_scene: PackedScene
 
 var initial_position = Vector2(100, 100)
 var node_index = 0

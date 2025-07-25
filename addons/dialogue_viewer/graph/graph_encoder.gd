@@ -53,7 +53,7 @@ func try_add_options(node: Dictionary, from_node: Dictionary) -> void:
 	ops.sort_custom(func(a,b): a.values()[0] < b.values()[0])
 	print(ops)
 	node.set("options", ops)
-	
+
 func try_add_character(node: Dictionary, from_node: Dictionary) -> void:
 	if from_node.has("character"):
 		node["character"] = from_node["character"]

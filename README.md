@@ -31,7 +31,7 @@ _Note: This project is currently under development._
 - No programming is required for this part
 - Simply use the DialogueViewer panel to manage your dialogue structure.
 - The only requirement is that each Dialogue MUST have a Start Node and an End Node.
-- For a visual reference, here’s a screenshot of the plugin in action:  
+- For a visual reference, here’s a screenshot of the plugin in action:
   ![Screenshot](https://github.com/user-attachments/assets/869fc301-f446-4333-9dd7-a70ddb38595d)
 
 ### Dialogue Reader
@@ -41,9 +41,9 @@ _Note: This project is currently under development._
 - The dialogue_reader has a signal you can listen to called end_reached. This will get called when you have reached the end of the dialogue
 - To start reading, call the get_next_line() function from the dialogue_reader. This returns a Dialogue Object
   Check below for an example
-  
+
 ![Demo](https://github.com/user-attachments/assets/44da79c8-f897-4c7e-bc3d-5dc26b61f632)
-  
+
 ![image](https://github.com/user-attachments/assets/4e6023b0-c66b-41da-a75f-ee8e96f1e852)
 
 ![image](https://github.com/user-attachments/assets/05026fbb-b5ea-4310-b972-ffdd0589a733)

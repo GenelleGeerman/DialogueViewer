@@ -30,7 +30,7 @@ func get_next_line(selected_option = "") -> Dialogue:
 		push_error("Dialogue "+dialogue.resource_name+ " has incomplete connections")
 		return _end_dialogue()
 	var node = readable[next_node_name]
-	
+
 	if node.has("character"): #is a character node
 		speaker = node["character"] as CharacterData
 		next_node_name = node["to_node"][0]
